@@ -1,15 +1,17 @@
-let cardSigns = ["♦","♥" ,"♠" ,"♣"]
-let cardNumbers =["A", "1","2","3","4","5","6","7","8","9","10","J","Q","K"]
+let cardSigns = ['♦','♥' ,'♠' ,'♣'];
+let cardNumbers =["A", "1","2","3","4","5","6","7","8","9","10","J","Q","K"];
+
+
 
 let randomCardSigns = () =>{
-    return Math.floor(Math.random() * cardSigns.length)}
+    return Math.floor(Math.random() * cardSigns.length + 1)}
 let randomCardNumbers = () => {
-    return Math.floor(Math.random() * cardNumbers.length)}
+    return Math.floor(Math.random() * cardNumbers.length + 1)}
 
 
 
 
-    window.onload=()=> {
+window.onload=()=> {
 
 
     let body = document.body
@@ -32,7 +34,7 @@ let randomCardNumbers = () => {
 
 
     let containerImgOne= document.createElement("div")
-    containerImgOne.textContent="imagen1"
+    containerImgOne.textContent= randomCardSigns(cardSigns)
     containerImgOne.style.position="absolute"
     containerImgOne.style.top="1px"
     containerImgOne.style.left="1px"
@@ -44,7 +46,7 @@ let randomCardNumbers = () => {
 
 
     let containerImgTwo= document.createElement("div")
-    containerImgTwo.textContent="imagen2"
+    containerImgTwo.textContent= randomCardSigns(cardSigns)
     containerImgTwo.style.position="absolute"
     containerImgTwo.style.border="1px solid black"
     containerImgTwo.style.margin="10px"
@@ -55,14 +57,15 @@ let randomCardNumbers = () => {
     
     
     let containerNumber= document.createElement("p")
-    containerNumber.textContent="numero"
-    containerNumber.style.height="50px"
-    containerNumber.style.width="50px"
+    containerNumber.textContent= randomCardNumbers(cardNumbers)
+    containerNumber.style.height="75px"
+    containerNumber.style.width="75px"
     containerNumber.style.border="1px solid black"
     containerNumber.style.position="absolute"
-    containerNumber.style.top="175px"
-    containerNumber.style.height="50px"
-    containerNumber.style.right="110px"
+    containerNumber.style.top="115px"
+    containerNumber.style.height="75px"
+    containerNumber.style.right="100px"
+    containerNumber.style.fontSize="70px"
 
 
 
@@ -72,12 +75,5 @@ let randomCardNumbers = () => {
     card.appendChild(containerImgOne)
     card.appendChild(containerImgTwo)
     
-
-
-    
-
-
-    
-
 
 }
