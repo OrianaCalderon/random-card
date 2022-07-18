@@ -1,14 +1,13 @@
-let cardSigns = ['♦','♥' ,'♠' ,'♣'];
-let cardNumbers =["A", "1","2","3","4","5","6","7","8","9","10","J","Q","K"];
 
+let cardSigns = ['♦','♥' ,'♠' ,'♣'];
+let cardNumbers = [
+    "A","2","3","4","5","6","7","8","9","10","J","Q","K"]
 
 
 let randomCardSigns = () =>{
-    return Math.floor(Math.random() * cardSigns.length + 1)}
-let randomCardNumbers = () => {
-    return Math.floor(Math.random() * cardNumbers.length + 1)}
-
-
+    return Math.floor(Math.random() * cardSigns.length)} 
+let randomCardNumbers = ()=>{
+    return Math.floor(Math.random() * cardNumbers.length)} 
 
 
 window.onload=()=> {
@@ -34,7 +33,7 @@ window.onload=()=> {
 
 
     let containerImgOne= document.createElement("div")
-    containerImgOne.textContent= randomCardSigns(cardSigns)
+    containerImgOne.textContent= "inicio"
     containerImgOne.style.position="absolute"
     containerImgOne.style.top="1px"
     containerImgOne.style.left="1px"
@@ -46,7 +45,7 @@ window.onload=()=> {
 
 
     let containerImgTwo= document.createElement("div")
-    containerImgTwo.textContent= randomCardSigns(cardSigns)
+    containerImgTwo.textContent= "fin"
     containerImgTwo.style.position="absolute"
     containerImgTwo.style.border="1px solid black"
     containerImgTwo.style.margin="10px"
@@ -67,13 +66,9 @@ window.onload=()=> {
     containerNumber.style.right="100px"
     containerNumber.style.fontSize="70px"
 
-
-
-
-
-    card.appendChild(containerNumber)
+    
     card.appendChild(containerImgOne)
     card.appendChild(containerImgTwo)
-    
+    card.appendChild(containerNumber)
 
 }
