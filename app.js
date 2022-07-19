@@ -1,13 +1,13 @@
 
-let cardSigns = ['♦','♥' ,'♠' ,'♣'];
+let cardSigns = ["♦","♦", "♥", "♠", "♣"];
 let cardNumbers = [
     "A","2","3","4","5","6","7","8","9","10","J","Q","K"]
 
 
 let randomCardSigns = () =>{
-    return Math.floor(Math.random() * cardSigns.length)} 
-let randomCardNumbers = ()=>{
-    return Math.floor(Math.random() * cardNumbers.length)} 
+    return Math.floor(Math.random() * cardSigns.length + 1)} 
+let randomCardNumbers = () =>{
+    return Math.floor(Math.random() * cardNumbers.length + 1)} 
 
 
 window.onload=()=> {
@@ -45,7 +45,7 @@ window.onload=()=> {
 
 
     let containerImgTwo= document.createElement("div")
-    containerImgTwo.textContent= "fin"
+    containerImgTwo.textContent= randomCardSigns(cardSigns)
     containerImgTwo.style.position="absolute"
     containerImgTwo.style.border="1px solid black"
     containerImgTwo.style.margin="10px"
