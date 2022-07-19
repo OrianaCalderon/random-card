@@ -1,13 +1,13 @@
-
-let cardSigns = ["♦","♦", "♥", "♠", "♣"];
-let cardNumbers = [
-    "A","2","3","4","5","6","7","8","9","10","J","Q","K"]
-
-
-let randomCardSigns = () =>{
-    return Math.floor(Math.random() * cardSigns.length + 1)} 
-let randomCardNumbers = () =>{
-    return Math.floor(Math.random() * cardNumbers.length + 1)} 
+let generateRandomNumber = () => {
+    let cardNumbers = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
+    let randomCardNumbers =  Math.floor(Math.random() * cardNumbers.length); 
+return cardNumbers[randomCardNumbers];
+}
+let generateRandomSign = () => {
+    let cardSigns = ["♦","♦", "♥", "♠", "♣"];
+    let randomCardSigns =  Math.floor(Math.random() * cardSigns.length);
+return cardSigns[randomCardSigns];
+}
 
 
 window.onload=()=> {
@@ -33,37 +33,36 @@ window.onload=()=> {
 
 
     let containerImgOne= document.createElement("div")
-    containerImgOne.textContent= "inicio"
+    containerImgOne.textContent= generateRandomSign()
     containerImgOne.style.position="absolute"
-    containerImgOne.style.top="1px"
-    containerImgOne.style.left="1px"
+    containerImgOne.style.top="0px"
+    containerImgOne.style.left="10px"
     containerImgOne.style.width="45px"
     containerImgOne.style.height="45px"
-    containerImgOne.style.border="1px solid black"
-    containerImgOne.style.margin="15px"
+    containerImgOne.style.margin="0px"
+    containerImgOne.style.fontSize="70px"
 
 
 
     let containerImgTwo= document.createElement("div")
-    containerImgTwo.textContent= randomCardSigns(cardSigns)
+    containerImgTwo.textContent= generateRandomSign()
     containerImgTwo.style.position="absolute"
-    containerImgTwo.style.border="1px solid black"
-    containerImgTwo.style.margin="10px"
-    containerImgTwo.style.right="5px"
+    containerImgTwo.style.margin="0px"
+    containerImgTwo.style.right="1px"
     containerImgTwo.style.top="350px"
     containerImgTwo.style.height="50px"
     containerImgTwo.style.width="50px"
+    containerImgTwo.style.fontSize="70px"
     
     
     let containerNumber= document.createElement("p")
-    containerNumber.textContent= randomCardNumbers(cardNumbers)
+    containerNumber.textContent= generateRandomNumber()
     containerNumber.style.height="75px"
     containerNumber.style.width="75px"
-    containerNumber.style.border="1px solid black"
     containerNumber.style.position="absolute"
     containerNumber.style.top="115px"
     containerNumber.style.height="75px"
-    containerNumber.style.right="100px"
+    containerNumber.style.right="90px"
     containerNumber.style.fontSize="70px"
 
     
