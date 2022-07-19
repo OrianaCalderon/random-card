@@ -45,7 +45,7 @@ window.onload=()=> {
 
 
     let containerImgTwo= document.createElement("div")
-    containerImgTwo.textContent= generateRandomSign()
+    containerImgTwo.textContent= containerImgOne.textContent
     containerImgTwo.style.position="absolute"
     containerImgTwo.style.margin="0px"
     containerImgTwo.style.right="1px"
